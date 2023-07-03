@@ -12,7 +12,7 @@
   <Overview>Unraid Version of: myoung34/github-runner (unoffical)&#xD;
 &#xD;
 This will run the new self-hosted Github actions runners with docker-in-docker &#xD;
-&#xD;
+This project is meant for org level github runners.&#xD;
 If you want to support my random projects: &#xD;
 &#xD;
 https://www.patreon.com/user?u=35280989&#xD;
