@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>github-runner-repo-level</Name>
+  <Repository>myoung34/github-runner:latest</Repository>
+  <Registry>https://hub.docker.com/r/myoung34/github-runner</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://hub.docker.com/r/myoung34/github-runner</Project>
+  <Overview>Unraid Version of: myoung34/github-runner (unoffical)&#xD;
+&#xD;
+This will run the new self-hosted Github actions runners with docker-in-docker. This project is meant for repo level github runners(e.g personal repos :) )&#xD;
+&#xD;
+&#xD;
+If you want to support my random projects: &#xD;
+&#xD;
+https://www.patreon.com/user?u=35280989&#xD;
+</Overview>
+  <Category>Cloud: Productivity: Security: Tools: Other:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://avatars.githubusercontent.com/u/1824940?v=4</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1688411884</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="RUNNER_TOKEN" Target="RUNNER_TOKEN" Default="RUNNER_TOKEN" Mode="" Description="RUNNER_TOKEN" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="RUNNER_NAME" Target="RUNNER_NAME" Default="unriad" Mode="" Description="The name of the runner to use. Supercedes (overrides) RUNNER_NAME_PREFIX" Type="Variable" Display="always" Required="true" Mask="false">unraid</Config>
+  <Config Name="RUNNER_WORKDIR" Target="RUNNER_WORKDIR" Default="/tmp/github-runner-your-repo" Mode="" Description="The working directory for the runner. Runners on the same host should not share this directory. Default is '/_work'. This must match the source path for the bind-mounted volume at RUNNER_WORKDIR, in order for container actions to access files." Type="Variable" Display="always" Required="true" Mask="false">/tmp/github-runner-your-repo</Config>
+  <Config Name="RUNNER_GROUP" Target="RUNNER_GROUP" Default="default" Mode="" Description="Name of the runner group to add this runner to (defaults to the default runner group)" Type="Variable" Display="always" Required="true" Mask="false">default</Config>
+  <Config Name="/tmp/github-runner-your-repo" Target="/tmp/github-runner-your-repo" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="REPO_URL" Target="REPO_URL" Default="REPO_URL" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">ex: https://github.com/jondoe/test</Config>
+</Container>
