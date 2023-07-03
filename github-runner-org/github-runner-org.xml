@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>github-runner-org</Name>
+  <Repository>myoung34/github-runner:latest</Repository>
+  <Registry>https://hub.docker.com/r/myoung34/github-runner</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://hub.docker.com/r/myoung34/github-runner</Project>
+  <Overview>Unraid Version of: myoung34/github-runner (unoffical)&#xD;
+&#xD;
+This will run the new self-hosted Github actions runners with docker-in-docker &#xD;
+&#xD;
+If you want to support my random projects: &#xD;
+&#xD;
+https://www.patreon.com/user?u=35280989&#xD;
+</Overview>
+  <Category>Cloud: Productivity: Security: Tools: Other:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://avatars.githubusercontent.com/u/1824940?v=4</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1688402957</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="ACCESS_TOKEN" Target="ACCESS_TOKEN" Default="[insert PAT]" Mode="" Description="A github PAT to use to generate RUNNER_TOKEN dynamically at container start. Not using this requires a valid RUNNER_TOKEN&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="true">YOUR ORG PAT</Config>
+  <Config Name="RUNNER_NAME" Target="RUNNER_NAME" Default="unriad" Mode="" Description="The name of the runner to use. Supercedes (overrides) RUNNER_NAME_PREFIX" Type="Variable" Display="always" Required="true" Mask="false">unriad</Config>
+  <Config Name="RUNNER_WORKDIR" Target="RUNNER_WORKDIR" Default="/tmp/github-runner-your-repo" Mode="" Description="The working directory for the runner. Runners on the same host should not share this directory. Default is '/_work'. This must match the source path for the bind-mounted volume at RUNNER_WORKDIR, in order for container actions to access files." Type="Variable" Display="always" Required="true" Mask="false">/tmp/github-runner-your-repo</Config>
+  <Config Name="RUNNER_GROUP" Target="RUNNER_GROUP" Default="default" Mode="" Description="Name of the runner group to add this runner to (defaults to the default runner group)" Type="Variable" Display="always" Required="true" Mask="false">default</Config>
+  <Config Name="RUNNER_SCOPE" Target="RUNNER_SCOPE" Default="org" Mode="" Description="The scope the runner will be registered on. Valid values are repo, org and ent. For 'org' and 'enterprise', ACCESS_TOKEN is required and REPO_URL is unnecessary. If 'org', requires ORG_NAME; if 'enterprise', requires ENTERPRISE_NAME. Default is 'repo'." Type="Variable" Display="always" Required="true" Mask="false">org</Config>
+  <Config Name="ORG_NAME" Target="ORG_NAME" Default="" Mode="" Description="The organization name for the runner to register under. Requires RUNNER_SCOPE to be 'org'. No default value." Type="Variable" Display="always" Required="true" Mask="false">YOUR ORG NAME</Config>
+  <Config Name="LABELS" Target="LABELS" Default="unraid" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">unraid</Config>
+  <Config Name="/tmp/github-runner-your-repo" Target="/tmp/github-runner-your-repo" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
+</Container>
