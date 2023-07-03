@@ -31,4 +31,10 @@ The token should have the following prermissions( [Title](https://github.com/myo
 * set the org name to ORG_NAME(for example: https://github.com/pta org name is pta ) 
 * set /tmp/github-runner-your-repo to some share on your unraid NAS
 
+
+Pro-Tip: Make sure the working patch is unique of you have multiple containers. Example Below: 
+* /mnt/user/misc/actions-runner/user/project/1/
+* /mnt/user/misc/actions-runner/user/project/2/
+* /mnt/user/misc/actions-runner/user/project/.../
+
 ## All credit goes to myoung34. 
